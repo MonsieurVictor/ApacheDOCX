@@ -82,33 +82,33 @@ public class Main {
 //        out.close();
 //        document.close();
 
-        Path msWordPath = Paths.get("annotation.docx");
+        Path msWordPath = Paths.get("C://disV5.docx");
         XWPFDocument document2 = new XWPFDocument(Files.newInputStream(msWordPath));
         List<XWPFParagraph> paragraphs = document2.getParagraphs();
         document2.close();
 
-        try {
-
-
-            FileInputStream fis = new FileInputStream("annotation.docx");
-            XWPFDocument xdoc = new XWPFDocument(OPCPackage.open(fis));
-            List <XWPFPictureData> pic = xdoc.getAllPictures();
-            if (!pic.isEmpty()) {
-                System.out.println(pic.get(0).getPictureType());
-                System.out.println(pic.get(0).getData());
-                System.out.println(pic.get(0).getFileName());
-            }
-            if (!pic.isEmpty()) {
-                System.out.println(pic.get(1).getPictureType());
-                System.out.println(pic.get(1).getData());
-                System.out.println(pic.get(1).getFileName());
-            }
-
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+//        try {
+//
+//
+//            FileInputStream fis = new FileInputStream("annotation.docx");
+//            XWPFDocument xdoc = new XWPFDocument(OPCPackage.open(fis));
+//            List <XWPFPictureData> pic = xdoc.getAllPictures();
+//            if (!pic.isEmpty()) {
+//                System.out.println(pic.get(0).getPictureType());
+//                System.out.println(pic.get(0).getData());
+//                System.out.println(pic.get(0).getFileName());
+//            }
+//            if (!pic.isEmpty()) {
+//                System.out.println(pic.get(1).getPictureType());
+//                System.out.println(pic.get(1).getData());
+//                System.out.println(pic.get(1).getFileName());
+//            }
+//
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
         System.out.println("_________________________________________");
-        for (XWPFParagraph paragraph:paragraphs){
+        for (XWPFParagraph paragraph:paragraphs) {
             System.out.println(paragraph.getAlignment());
             for (XWPFRun rn : paragraph.getRuns()) {
                 System.out.println(rn);
@@ -125,6 +125,37 @@ public class Main {
             System.out.println("********************************************************************");
 
         }
+        XWPFDocument doc = new XWPFDocument(OPCPackage.open("C://disV5.docx"));
+        for (XWPFParagraph p : doc.getParagraphs()) {
+            List<XWPFRun> runs = p.getRuns();
+            if (runs != null) {
+                for (XWPFRun r : runs) {
+                    String text = r.getText(0);
+                    if (text != null ) {
+                        text = text.concat("!!!");
+                        r.setText(text,0);
+                    }
+                }
+            }
+        }
+        for (XWPFTable tbl : doc.getTables()) {
+            for (XWPFTableRow row : tbl.getRows()) {
+                for (XWPFTableCell cell : row.getTableCells()) {
+                    for (XWPFParagraph p : cell.getParagraphs()) {
+                        for (XWPFRun r : p.getRuns()) {
+                            p.setWordWrapped(true);
+                            String text = r.getText(0);
+                            if (text != null) {
+                                text = text.concat("!!!");
+                                r.setText(text,0);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        doc.write(new FileOutputStream("C://disV5output.docx"));
+        System.out.println("success!");
     }
 
     public static String convertTextFileToString(String fileName) {
@@ -135,5 +166,8 @@ public class Main {
         }
         return null;
     }
+
+
+
 }
 
