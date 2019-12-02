@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordKeepFormat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordModifierNoIntact.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordModifierOld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/Main.java" afterDir="false" />
@@ -25,11 +22,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>path</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -135,6 +127,10 @@
       <workItem from="1575034751822" duration="387000" />
       <workItem from="1575035165518" duration="2496000" />
       <workItem from="1575191886929" duration="8325000" />
+      <workItem from="1575224803832" duration="2934000" />
+      <workItem from="1575233819788" duration="1675000" />
+      <workItem from="1575235765712" duration="807000" />
+      <workItem from="1575287316385" duration="2007000" />
     </task>
     <servers />
   </component>
@@ -159,8 +155,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/baeldung/poi/Main.java</url>
-          <line>27</line>
+          <line>51</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordKeepFormat.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
