@@ -37,7 +37,7 @@ public class Main {
 //        };
 
 
-        XWPFDocument document = new XWPFDocument(new FileInputStream("C://styles3.docx"));
+        XWPFDocument document = new XWPFDocument(new FileInputStream("docs//styles3.docx"));
 
         System.out.println(document.getStyles().styleExist("SAMOSVAT"));
         System.out.println(document.getStyles().getStyle("SAMOSVAT").getName());
