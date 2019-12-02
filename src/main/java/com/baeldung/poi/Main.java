@@ -1,20 +1,5 @@
 package com.baeldung.poi;
 
-import org.apache.poi.openxml4j.opc.OPCPackage;
-import org.apache.poi.util.Units;
-import org.apache.poi.xwpf.usermodel.*;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-
 public class Main {
     public static String logo = "logo-leaf.png";
     public static String paragraph1 = "poi-word-para1.txt";
@@ -37,18 +22,24 @@ public class Main {
 //        };
 
 
-        XWPFDocument document = new XWPFDocument(new FileInputStream("docs//styles3.docx"));
+        CommentCreator commentCreator = new CommentCreator();
+        commentCreator.createComment();
 
-        System.out.println(document.getStyles().styleExist("SAMOSVAT"));
-        System.out.println(document.getStyles().getStyle("SAMOSVAT").getName());
+        CommentManipulator commentManipulator = new CommentManipulator();
+        commentManipulator.startManipulating();
 
-        XWPFParagraph paragraph=document.createParagraph();
-        paragraph.setStyle("SAMOSVAT");
-        XWPFRun run=paragraph.createRun();
-        run.setText("TEST");
-
-        document.write(new FileOutputStream("docs//stylestest.docx"));
-        document.close();
+//        XWPFDocument document = new XWPFDocument(new FileInputStream("docs//styles3.docx"));
+//
+//        System.out.println(document.getStyles().styleExist("SAMOSVAT"));
+//        System.out.println(document.getStyles().getStyle("SAMOSVAT").getName());
+//
+//        XWPFParagraph paragraph=document.createParagraph();
+//        paragraph.setStyle("SAMOSVAT");
+//        XWPFRun run=paragraph.createRun();
+//        run.setText("TEST");
+//
+//        document.write(new FileOutputStream("docs//stylestest.docx"));
+//        document.close();
     }
 }
 
