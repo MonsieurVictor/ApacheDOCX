@@ -1,4 +1,4 @@
-package com.samosvat.poi.diplom;
+package com.samosvat.diplom;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -21,33 +21,25 @@ import javax.xml.namespace.QName;
 import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
     public class CommentsAdder {
+
+        XWPFDocument doc;
+        List<XWPFParagraph> paragraphs;
+
         public void start(ArrayList <StyleProperties> stylesArrayList) {
 
+            System.out.println("Styles from stylesArrayList:");
             for (int i = 0; i < stylesArrayList.size(); i++) {
                 System.out.println(stylesArrayList.get(i).getStyleName());
             }
-
+            System.out.println("-------------------------------");
             String fileName = "C:\\styles4.docx";
             String fileOut = "C:\\styles44444.docx";
 
             try {
-                XWPFDocument doc = new XWPFDocument(OPCPackage.open(fileName));
-
-                System.out.println("Комментариев добавлено: " + findText(doc));
-
-                for (XWPFParagraph p : doc.getParagraphs()) {
-                    List<XWPFRun> runs = p.getRuns();
-                    if (runs != null) {
-                        for (XWPFRun r : runs) {
-                            String text = r.getText(0);
-                            if (text != null) {
-                                text = text.concat("!!!");
-                                r.setText(text, 0);
-                            }
-                        }
-                    }
-                }
-
+                doc = new XWPFDocument(OPCPackage.open(fileName));
+                paragraphs = doc.getParagraphs();
+                System.out.println("Комментариев добавлено: " + findText());
+                readParagraphStyle();
                 FileOutputStream out = new FileOutputStream(fileOut);
                 doc.write(out);
 
@@ -59,7 +51,8 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                 e.printStackTrace();
             }
         }
-        private int findText(XWPFDocument doc) throws Exception {
+
+        private int findText() throws Exception {
 
             String forComment1 = "Основной текст";
             String forComment2 = "Заголовок текст";
@@ -68,7 +61,8 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
             int commentsAddedCount = 0;
             BigInteger bIg = BigInteger.ZERO;
-            List<XWPFParagraph> paragraphs = doc.getParagraphs();
+
+
             System.out.println("Всего абзацев: " + paragraphs.size());
             System.out.println("Коментариев найдено: " + doc.getComments().length);
 
@@ -76,6 +70,8 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                 CommentsAdder.MyXWPFCommentsDocument myXWPFCommentsDocument = createCommentsDocument(doc);
                 for (int i = 0; i < paragraphs.size(); i++) {
                     XWPFParagraph paragraph = paragraphs.get(i);
+                    getFontSize(paragraph);
+
                     if (paragraph.getText().contains(forComment1)) {
                         int count = paragraph.getText().length();
                         bIg = bIg.add(BigInteger.ONE);
@@ -93,6 +89,7 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                         paragraph.getCTP().addNewCommentRangeEnd().setId(bIg);
                         paragraph.getCTP().addNewR().addNewCommentReference().setId(bIg);
                     }
+
                     if (paragraph.getText().contains(forComment2)) {
                         int count = paragraph.getText().length();
                         bIg = bIg.add(BigInteger.ONE);
@@ -115,33 +112,67 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
             return  commentsAddedCount;
         }
 
+        private void getFontSize (XWPFParagraph paragraph){
+            List<XWPFRun> runs = paragraph.getRuns();
+            if (runs != null) {
+                System.out.println("Paragraph text:" + paragraph.getText());
+                for (XWPFRun r : runs) {
+                    int fontSize = r.getFontSize();
+                    if (fontSize == -1){
+                        System.out.println("Font size:" + doc.getStyles().getDefaultRunStyle().getFontSize());
+                    } else {
+                        System.out.println("Font size:" + r.getFontSize());
+                    }
+                }
+            }
+
+
+        }
+
+        private void readParagraphStyle () {
+            Iterator<XWPFParagraph> paragraphIterator = null;
+            paragraphIterator=paragraphs.iterator();
+            List<IBodyElement> iBodyElementList = doc.getBodyElements();
+            XWPFParagraph paragraph = null;
+
+            for (IBodyElement p : iBodyElementList) {
+                XWPFStyle style = null;
+                BodyElementType bodyElementType = p.getElementType();
+                if (bodyElementType.compareTo(BodyElementType.PARAGRAPH) == 0) {
+                    if (paragraphIterator.hasNext()) {
+                        paragraph = paragraphIterator.next();
+//                        style = paragraph.getStyle(paragraph.getStyleID());
+                        System.out.println("getStyleID(): " + paragraph.getStyleID()
+                                + "; getStyle(): " + paragraph.getStyle()
+                                + "; getText(): "+ paragraph.getText() );
+                    }
+
+                }
+            }
+        }
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //a method for creating the CommentsDocument /word/comments.xml in the *.docx ZIP archive
         private static CommentsAdder.MyXWPFCommentsDocument createCommentsDocument(XWPFDocument document) throws Exception {
             OPCPackage oPCPackage = document.getPackage();
             PackagePartName partName = PackagingURIHelper.createPartName("/word/comments.xml");
             PackagePart part = oPCPackage.createPart(partName, "application/vnd.openxmlformats-officedocument.wordprocessingml.comments+xml");
             CommentsAdder.MyXWPFCommentsDocument myXWPFCommentsDocument = new CommentsAdder.MyXWPFCommentsDocument(part);
-
             String rId = "rId" + (document.getRelationParts().size() + 1);
             document.addRelation(rId, XWPFRelation.COMMENT, myXWPFCommentsDocument);
-
             return myXWPFCommentsDocument;
         }
 
         //a wrapper class for the CommentsDocument /word/comments.xml in the *.docx ZIP archive
         private static class MyXWPFCommentsDocument extends POIXMLDocumentPart {
-
             private CTComments comments;
-
             private MyXWPFCommentsDocument(PackagePart part) throws Exception {
                 super(part);
                 comments = CommentsDocument.Factory.newInstance().addNewComments();
             }
-
             private CTComments getComments() {
                 return comments;
             }
-
             @Override
             protected void commit() throws IOException {
                 XmlOptions xmlOptions = new XmlOptions(DEFAULT_XML_OPTIONS);

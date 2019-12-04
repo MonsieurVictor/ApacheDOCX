@@ -1,4 +1,4 @@
-package com.samosvat.poi;
+package com.samosvat;
 
 public class MainOLD {
     public static String logo = "logo-leaf.png";

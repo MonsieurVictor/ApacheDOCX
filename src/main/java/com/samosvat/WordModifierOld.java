@@ -1,4 +1,4 @@
-package com.samosvat.poi;
+package com.samosvat;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.openxml4j.opc.OPCPackage;

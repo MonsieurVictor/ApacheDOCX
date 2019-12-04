@@ -1,4 +1,4 @@
-package com.samosvat.poi.word;
+package com.samosvat.word;
 
 import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.*;

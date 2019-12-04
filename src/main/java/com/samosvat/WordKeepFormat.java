@@ -1,4 +1,4 @@
-package com.samosvat.poi;
+package com.samosvat;
 import org.apache.poi.xwpf.usermodel.*;
 import java.util.HashMap;
 import java.util.Map;

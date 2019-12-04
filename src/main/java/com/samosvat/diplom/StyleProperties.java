@@ -1,4 +1,4 @@
-package com.samosvat.poi.diplom;
+package com.samosvat.diplom;
 
 public class StyleProperties {
     private final String styleName;

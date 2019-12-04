@@ -1,4 +1,4 @@
-package com.samosvat.poi.diplom;
+package com.samosvat.diplom;
 
 import java.io.FileInputStream;
 import java.io.IOException;

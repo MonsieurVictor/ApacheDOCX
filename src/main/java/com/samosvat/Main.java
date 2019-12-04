@@ -1,8 +1,8 @@
-package com.samosvat.poi;
+package com.samosvat;
 
-import com.samosvat.poi.diplom.CommentsAdder;
-import com.samosvat.poi.diplom.PropertiesReader;
-import com.samosvat.poi.diplom.StyleProperties;
+import com.samosvat.diplom.CommentsAdder;
+import com.samosvat.diplom.StyleProperties;
+import com.samosvat.diplom.PropertiesReader;
 
 import java.util.ArrayList;
 
