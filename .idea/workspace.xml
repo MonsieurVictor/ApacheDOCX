@@ -2,12 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/CommentCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/CommentManipulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/CommentCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/CommentManipulator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/CommentsAdder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/CommentsAdderOLD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/PropertiesReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/StyleProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/baeldung/poi/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/jexcel/JExcelHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/CommentCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/CommentManipulator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/MainOLD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordKeepFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/WordKeepFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordModifierNoIntact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/WordModifierNoIntact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordModifierOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/WordModifierOld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/excel/ExcelPOIHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/powerpoint/PowerPointHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/baeldung/poi/word/WordDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/word/WordDocument.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/baeldung/jexcel/JExcelIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/baeldung/poi/excel/ExcelIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/baeldung/poi/powerpoint/PowerPointIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/baeldung/poi/word/WordIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/jexcel/JExcelHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/CommentCreator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/CommentCreator$MyXWPFCommentsDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/CommentCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/CommentManipulator$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/CommentManipulator$MyXWPFCommentsDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/CommentManipulator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/WordKeepFormat.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/WordModifierNoIntact.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/WordModifierOld.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/excel/ExcelPOIHelper$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/excel/ExcelPOIHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/powerpoint/PowerPointHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/baeldung/poi/word/WordDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/baeldung/jexcel/JExcelIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/baeldung/poi/excel/ExcelIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/baeldung/poi/powerpoint/PowerPointIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/baeldung/poi/word/WordIntegrationTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/~$eateWordWithComments.docx" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,13 +75,24 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/baeldung/poi" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.samosvat.poi.diplom" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX\src\main\java\com\baeldung\poi" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -60,11 +110,11 @@
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="com.baeldung.poi.Main" />
+      <option name="MAIN_CLASS_NAME" value="com.samosvat.poi.Main" />
       <module name="apache" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.baeldung.poi.*" />
+          <option name="PATTERN" value="com.samosvat.poi.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,7 +184,12 @@
       <workItem from="1575235765712" duration="807000" />
       <workItem from="1575287316385" duration="3020000" />
       <workItem from="1575305081459" duration="627000" />
-      <workItem from="1575307240774" duration="6321000" />
+      <workItem from="1575307240774" duration="7803000" />
+      <workItem from="1575371255328" duration="2963000" />
+      <workItem from="1575374243047" duration="2872000" />
+      <workItem from="1575400851230" duration="4415000" />
+      <workItem from="1575452146786" duration="12805000" />
+      <workItem from="1575470054147" duration="500000" />
     </task>
     <servers />
   </component>
@@ -158,14 +213,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/baeldung/poi/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/poi/MainOLD.java</url>
           <line>42</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/baeldung/poi/WordKeepFormat.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/poi/WordKeepFormat.java</url>
           <line>36</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/poi/Main.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
