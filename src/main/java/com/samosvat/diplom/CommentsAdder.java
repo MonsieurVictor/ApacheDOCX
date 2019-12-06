@@ -13,10 +13,15 @@ import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackagePart;
 import org.apache.poi.openxml4j.opc.PackagePartName;
 import org.apache.poi.openxml4j.opc.PackagingURIHelper;
+import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.apache.xmlbeans.XmlOptions;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
+import org.xml.sax.SAXException;
+
 import javax.xml.namespace.QName;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPathExpressionException;
 
 import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
@@ -26,23 +31,21 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
         List<XWPFParagraph> paragraphs;
 
         public void start(ArrayList <StyleProperties> stylesArrayList) {
-
             System.out.println("Styles from stylesArrayList:");
             for (int i = 0; i < stylesArrayList.size(); i++) {
                 System.out.println(stylesArrayList.get(i).getStyleName());
             }
             System.out.println("-------------------------------");
-            String fileName = "C:\\styles4.docx";
+            String fileName = "C:\\DisV51.docx";
             String fileOut = "C:\\styles44444.docx";
-
             try {
                 doc = new XWPFDocument(OPCPackage.open(fileName));
                 paragraphs = doc.getParagraphs();
                 System.out.println("Комментариев добавлено: " + findText());
-                readParagraphStyle();
+//                readParagraphStyle();
                 FileOutputStream out = new FileOutputStream(fileOut);
                 doc.write(out);
-
+//                doc.close();
             } catch (InvalidFormatException e) {
                 e.printStackTrace();
             } catch (IOException e) {
@@ -54,23 +57,25 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
         private int findText() throws Exception {
 
-            String forComment1 = "Основной текст";
-            String forComment2 = "Заголовок текст";
-            String textComment1 = "Найден основной текст";
-            String textComment2 = "Найден заголовок";
+            String forComment1 = "процесс";
+            String forComment2 = "студент";
+            String textComment1 = "Найден процесс";
+            String textComment2 = "Найден студент";
 
             int commentsAddedCount = 0;
             BigInteger bIg = BigInteger.ZERO;
-
 
             System.out.println("Всего абзацев: " + paragraphs.size());
             System.out.println("Коментариев найдено: " + doc.getComments().length);
 
             if (doc.getComments().length == 0) {
                 CommentsAdder.MyXWPFCommentsDocument myXWPFCommentsDocument = createCommentsDocument(doc);
+                System.out.println("Число параграфов: " + paragraphs.size());
                 for (int i = 0; i < paragraphs.size(); i++) {
+
                     XWPFParagraph paragraph = paragraphs.get(i);
                     getFontSize(paragraph);
+                    xwpfHeader = XWPFHeaderFooterPolicy.getHeader(STHdrFtr.Enum.forInt(2));
 
                     if (paragraph.getText().contains(forComment1)) {
                         int count = paragraph.getText().length();
@@ -81,7 +86,6 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                         ctComment.setAuthor("Samosvat");
                         ctComment.setInitials("VVS");
                         ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
-
                         ctComment.addNewP().addNewR().addNewT().setStringValue(textComment1 + "\n Первый комментарий.");
                         ctComment.addNewP().addNewR().addNewT().setStringValue( "\n Также в этом абзаце " + count + " символов.");
                         ctComment.setId(bIg);
@@ -93,7 +97,6 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                     if (paragraph.getText().contains(forComment2)) {
                         int count = paragraph.getText().length();
                         bIg = bIg.add(BigInteger.ONE);
-
                         CTComments comments = myXWPFCommentsDocument.getComments();
                         CTComment ctComment = comments.addNewComment();
                         ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
@@ -112,21 +115,33 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
             return  commentsAddedCount;
         }
 
-        private void getFontSize (XWPFParagraph paragraph){
-            List<XWPFRun> runs = paragraph.getRuns();
-            if (runs != null) {
-                System.out.println("Paragraph text:" + paragraph.getText());
-                for (XWPFRun r : runs) {
-                    int fontSize = r.getFontSize();
-                    if (fontSize == -1){
-                        System.out.println("Font size:" + doc.getStyles().getDefaultRunStyle().getFontSize());
-                    } else {
-                        System.out.println("Font size:" + r.getFontSize());
-                    }
-                }
+        private void getFontSize (XWPFParagraph paragraph) throws IOException, SAXException, ParserConfigurationException, XPathExpressionException {
+            String styleID = paragraph.getStyleID();
+            System.out.println("StyleID: " + styleID);
+            System.out.println(paragraph.getParagraphText());
+            System.out.println(paragraph.isPageBreak());
+//            System.out.println("paragraph.getAlignment() " + paragraph.getAlignment());
+//            System.out.println("paragraph.getBorderBetween() " + paragraph.getBorderBetween());
+//            System.out.println("paragraph.getBorderBottom " + paragraph.getBorderBottom());
+//            System.out.println("paragraph.getBorderLeft() " + paragraph.getBorderLeft());
+//            System.out.println("paragraph.getBorderRight() " + paragraph.getBorderRight());
+//            System.out.println("paragraph.getBorderTop() " + paragraph.getBorderTop());
+//            System.out.println("paragraph.getFontAlignment() " + paragraph.getFontAlignment());
+//            System.out.println("paragraph.getIndentationFirstLine() " + paragraph.getIndentationFirstLine());
+//            System.out.println("paragraph.getSpacingBefore() " + paragraph.getSpacingBefore());
+//            System.out.println("paragraph.getSpacingAfter() " + paragraph.getSpacingAfter());
+//            System.out.println("paragraph.getSpacingBetween() " + paragraph.getSpacingBetween());
+//            System.out.println("paragraph.getSpacingBeforeLines() " + paragraph.getSpacingBeforeLines());
+
+            if(styleID != null) {
+
+            XWPFStyle xwpfStyle= doc.getStyles().getStyle(styleID);
+            CTStyle ctStyle = xwpfStyle.getCTStyle();
+//            System.out.println(ctStyle.toString());
+            String stringXML = ctStyle.toString();
+            XMLParser xmlParser = new XMLParser();
+            xmlParser.parse(ctStyle.toString());
             }
-
-
         }
 
         private void readParagraphStyle () {
@@ -139,14 +154,10 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                 XWPFStyle style = null;
                 BodyElementType bodyElementType = p.getElementType();
                 if (bodyElementType.compareTo(BodyElementType.PARAGRAPH) == 0) {
-                    if (paragraphIterator.hasNext()) {
-                        paragraph = paragraphIterator.next();
-//                        style = paragraph.getStyle(paragraph.getStyleID());
-                        System.out.println("getStyleID(): " + paragraph.getStyleID()
-                                + "; getStyle(): " + paragraph.getStyle()
-                                + "; getText(): "+ paragraph.getText() );
-                    }
-
+                        if (paragraphIterator.hasNext()) {
+                            paragraph = paragraphIterator.next();
+                            System.out.println("getStyleID(): " + paragraph.getStyleID() + "; getStyle(): " + paragraph.getStyle() + "; getText(): "+ paragraph.getText() );
+                        }
                 }
             }
         }
@@ -176,6 +187,7 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
             @Override
             protected void commit() throws IOException {
                 XmlOptions xmlOptions = new XmlOptions(DEFAULT_XML_OPTIONS);
+                xmlOptions.setSaveSyntheticDocumentElement(new QName(CTComments.type.getName().getNamespaceURI(), "comments"));
                 xmlOptions.setSaveSyntheticDocumentElement(new QName(CTComments.type.getName().getNamespaceURI(), "comments"));
                 PackagePart part = getPackagePart();
                 OutputStream out = part.getOutputStream();

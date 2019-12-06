@@ -8,6 +8,8 @@ import java.util.Properties;
 public class PropertiesReader {
 
     public ArrayList <StyleProperties> start () throws IOException {
+
+        //hashmap
         Properties properties = new Properties();
         FileInputStream fileInputStream = new FileInputStream("styles.properties");
         properties.load(fileInputStream);

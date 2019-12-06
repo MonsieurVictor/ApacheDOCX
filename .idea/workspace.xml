@@ -2,30 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/VParagraph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/structureDissertation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/CommentCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/CommentCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/CommentManipulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/CommentManipulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/MainOLD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/MainOLD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/WordKeepFormat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/WordKeepFormat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/WordModifierNoIntact.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/WordModifierNoIntact.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/WordModifierOld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/WordModifierOld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/CommentsAdderOLD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdderOLD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/PropertiesReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/diplom/StyleProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/poi/word/WordDocument.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/word/WordDocument.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/MainOLD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/WordKeepFormat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/WordModifierNoIntact.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/WordModifierOld.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/diplom/CommentsAdder$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/diplom/CommentsAdder$MyXWPFCommentsDocument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/diplom/CommentsAdder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/diplom/PropertiesReader.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/diplom/StyleProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/poi/word/WordDocument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/WordKeepFormat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/WordKeepFormat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierNoIntact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierNoIntact.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierOld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierOld.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder$MyXWPFCommentsDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder$MyXWPFCommentsDocument.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/PropertiesReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/PropertiesReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/word/WordDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/word/WordDocument.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,10 +49,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/baeldung/poi" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.side.proportion" value="0.2678161" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -168,7 +160,9 @@
       <workItem from="1575374243047" duration="2872000" />
       <workItem from="1575400851230" duration="4415000" />
       <workItem from="1575452146786" duration="12805000" />
-      <workItem from="1575470054147" duration="10177000" />
+      <workItem from="1575470054147" duration="12867000" />
+      <workItem from="1575556064726" duration="9877000" />
+      <workItem from="1575624299987" duration="17998000" />
     </task>
     <servers />
   </component>
@@ -202,21 +196,35 @@
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/Main.java</url>
-          <line>30</line>
-          <option name="timeStamp" value="23" />
+          <url>jar://$MAVEN_REPOSITORY$/org/apache/poi/poi-ooxml-schemas/4.1.1/poi-ooxml-schemas-4.1.1.jar!/org/openxmlformats/schemas/wordprocessingml/x2006/main/CTRPr.class</url>
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="24" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
+          <line>52</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="text" />
-      </configuration>
-    </watches-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ApacheDOCX$Main.ic" NAME="Main Coverage Results" MODIFIED="1575625159400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.samosvat.poi.*</FILTER>
+    </SUITE>
   </component>
 </project>
