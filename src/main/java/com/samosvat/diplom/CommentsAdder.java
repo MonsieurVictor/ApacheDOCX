@@ -13,7 +13,6 @@ import org.apache.poi.openxml4j.opc.OPCPackage;
 import org.apache.poi.openxml4j.opc.PackagePart;
 import org.apache.poi.openxml4j.opc.PackagePartName;
 import org.apache.poi.openxml4j.opc.PackagingURIHelper;
-import org.apache.poi.xwpf.model.XWPFHeaderFooterPolicy;
 import org.apache.poi.xwpf.usermodel.*;
 import org.apache.xmlbeans.XmlOptions;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
@@ -75,7 +74,6 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
                     XWPFParagraph paragraph = paragraphs.get(i);
                     getFontSize(paragraph);
-                    xwpfHeader = XWPFHeaderFooterPolicy.getHeader(STHdrFtr.Enum.forInt(2));
 
                     if (paragraph.getText().contains(forComment1)) {
                         int count = paragraph.getText().length();

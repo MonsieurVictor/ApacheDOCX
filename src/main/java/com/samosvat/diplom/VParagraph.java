@@ -28,11 +28,11 @@
 //    }
 //
 //    List<AbstractTextBlock> defaultList = getSettings();
-//    Map<String, vParagraph> currentBlocksMap = new HashMap();
+//    Map <String, vParagraph> currentBlocksMap = new HashMap();
 //
 //    for(VParagraph vParagraph: vParagraphs){
 //            for(AbstractTextBlock textBlock : defaultList){
-//                if(textBlock.check(vParagraph){
+//                if(textBlock.check(vParagraph)) {
 //                    currentBlocksMap.put(textBlock.getTextBlockName(), vParagraph);
 //                }
 //            }
@@ -72,7 +72,7 @@
 //    }
 //}
 //
-//    class InstituteName extends AbstractTextBlock{
+//    private class InstituteName extends AbstractTextBlock{
 //        public final String INSTITUTE_NAME = "INSTITUTE_NAME";
 //        private String textTemplate = "~^Брянский институт~";
 //        private String styleTemplate = null;
@@ -91,7 +91,7 @@
 //        }
 //    }
 //
-//    class Title extends AbstractTextBlock{
+//    private class Title extends AbstractTextBlock{
 //        private String textTemplate  = "~^[a-bA-Bа-яА-Я]+(.){10;}~";
 //        private String styleTemplate = "";
 //    }

@@ -2,22 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/VParagraph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/structureDissertation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONTemp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdderOLD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/VParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/VParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/structureDissertation.json" beforeDir="false" afterPath="$PROJECT_DIR$/structureDissertation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/WordKeepFormat.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/WordKeepFormat.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierNoIntact.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierNoIntact.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierOld.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/WordModifierOld.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder$MyXWPFCommentsDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder$MyXWPFCommentsDocument.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/PropertiesReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/PropertiesReader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/word/WordDocument.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/word/WordDocument.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +33,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1UI5DWFKOVWkBGtFxzsLTmyeKH2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,14 +57,14 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX\src\main\java\com\baeldung\poi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.samosvat.poi.diplom" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX\src\main\java\com\baeldung\poi" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -163,6 +165,8 @@
       <workItem from="1575470054147" duration="12867000" />
       <workItem from="1575556064726" duration="9877000" />
       <workItem from="1575624299987" duration="17998000" />
+      <workItem from="1575659297829" duration="7727000" />
+      <workItem from="1575707614882" duration="14120000" />
     </task>
     <servers />
   </component>
@@ -218,6 +222,26 @@
           <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
           <line>31</line>
           <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
