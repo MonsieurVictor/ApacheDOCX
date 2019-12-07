@@ -1,12 +1,12 @@
 [
   {
-    "StyleID": "Abzats",
+    "styleID": "Abzats",
     "fontName": "Times New Roman",
     "fontHeight": "14",
     "isBold": "false"
   },
   {
-    "StyleID" : "Zagolovok1",
+    "styleID" : "Zagolovok1",
   "fontName" : "Times New Roman",
   "fontHeight" : "16",
   "isBold" : "true"

@@ -10,19 +10,22 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class StyleSampleReader {
+public class StyleSampleParser {
 
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public StyleSample[] start() throws IOException {
 
 
-        String path = "styles.json";
+        String path = "docs/styles.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         Gson gson = new Gson();
         StyleSample[] styleSamplesArray = gson.fromJson(bufferedReader, StyleSample[].class);
 
-        System.out.println(GSON.toJson(styleSamplesArray));
+//        System.out.println(GSON.toJson(styleSamplesArray));
+
+
+
 
         //hashmap
 //        Properties properties = new Properties();

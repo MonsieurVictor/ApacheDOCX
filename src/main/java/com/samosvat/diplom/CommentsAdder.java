@@ -28,12 +28,24 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
         XWPFDocument doc;
         List<XWPFParagraph> paragraphs;
+        StyleSample styleSample;
+        StyleSample [] stylesArray;
+        Chapter chapter;
+        Chapter[] chaptersArray;
+        int chapterCount;
+        ChapterChecker chapterChecker;
 
         public void start(StyleSample[] stylesArray, Chapter[] chaptersArray) {
-            System.out.println("Styles from stylesArrayList:");
-            for (int i = 0; i < stylesArray.length; i++) {
-                System.out.println(stylesArray[i].getStyleName());
-            }
+
+            chapterChecker = new ChapterChecker(chaptersArray);
+
+            this.stylesArray = stylesArray;
+            this.chaptersArray = chaptersArray;
+//            System.out.println("Styles from stylesArray:");
+//            for (int i = 0; i < stylesArray.length; i++) {
+//                System.out.println(stylesArray[i].getStyleID());
+//            }
+
             System.out.println("-------------------------------");
             String fileName = "C:\\DisV51.docx";
             String fileOut = "C:\\styles44444.docx";
@@ -44,6 +56,7 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 //                readParagraphStyle();
                 FileOutputStream out = new FileOutputStream(fileOut);
                 doc.write(out);
+                out.close();
 //                doc.close();
             } catch (InvalidFormatException e) {
                 e.printStackTrace();
@@ -57,25 +70,26 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
         private int findText() throws Exception {
 
             String forComment1 = "процесс";
-            String forComment2 = "студент";
             String textComment1 = "Найден процесс";
-            String textComment2 = "Найден студент";
 
             int commentsAddedCount = 0;
             BigInteger bIg = BigInteger.ZERO;
 
-            System.out.println("Всего абзацев: " + paragraphs.size());
             System.out.println("Коментариев найдено: " + doc.getComments().length);
 
             if (doc.getComments().length == 0) {
+                chapterCount = 0;
+
                 CommentsAdder.MyXWPFCommentsDocument myXWPFCommentsDocument = createCommentsDocument(doc);
                 System.out.println("Число параграфов: " + paragraphs.size());
                 for (int i = 0; i < paragraphs.size(); i++) {
 
                     XWPFParagraph paragraph = paragraphs.get(i);
                     getFontSize(paragraph);
+                    String errorMessage =  chapterChecker.checkChapter(paragraph);
 
-                    if (paragraph.getText().contains(forComment1)) {
+
+                    if (errorMessage != null) {
                         int count = paragraph.getText().length();
                         bIg = bIg.add(BigInteger.ONE);
                         CTComments comments = myXWPFCommentsDocument.getComments();
@@ -84,29 +98,13 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                         ctComment.setAuthor("Samosvat");
                         ctComment.setInitials("VVS");
                         ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
-                        ctComment.addNewP().addNewR().addNewT().setStringValue(textComment1 + "\n Первый комментарий.");
+                        ctComment.addNewP().addNewR().addNewT().setStringValue(errorMessage);
                         ctComment.addNewP().addNewR().addNewT().setStringValue( "\n Также в этом абзаце " + count + " символов.");
                         ctComment.setId(bIg);
                         commentsAddedCount++;
                         paragraph.getCTP().addNewCommentRangeEnd().setId(bIg);
                         paragraph.getCTP().addNewR().addNewCommentReference().setId(bIg);
-                    }
 
-                    if (paragraph.getText().contains(forComment2)) {
-                        int count = paragraph.getText().length();
-                        bIg = bIg.add(BigInteger.ONE);
-                        CTComments comments = myXWPFCommentsDocument.getComments();
-                        CTComment ctComment = comments.addNewComment();
-                        ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
-                        ctComment.setAuthor("Samosvat");
-                        ctComment.setInitials("VVS");
-                        ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
-
-                        ctComment.addNewP().addNewR().addNewT().setStringValue(textComment2 + "\n Также в этом абзаце " + count + " символов. Второй коммент");
-                        ctComment.setId(bIg);
-                        commentsAddedCount++;
-                        paragraph.getCTP().addNewCommentRangeEnd().setId(bIg);
-                        paragraph.getCTP().addNewR().addNewCommentReference().setId(bIg);
                     }
                 }
             }
@@ -144,7 +142,7 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
         private void readParagraphStyle () {
             Iterator<XWPFParagraph> paragraphIterator = null;
-            paragraphIterator=paragraphs.iterator();
+            paragraphIterator = paragraphs.iterator();
             List<IBodyElement> iBodyElementList = doc.getBodyElements();
             XWPFParagraph paragraph = null;
 

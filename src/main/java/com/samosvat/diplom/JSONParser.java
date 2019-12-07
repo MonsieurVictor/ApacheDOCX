@@ -47,12 +47,16 @@ public class JSONParser {
 //        writer.flush();
 //        writer.close();
 
-        String path = "structureDissertation.json";
+        String path = "docs/chaptersDissertation.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         Gson gson = new Gson();
         Chapter [] chaptersArray  = gson.fromJson(bufferedReader, Chapter[].class);
 
-        System.out.println(GSON.toJson(chaptersArray));
+
+
+//        System.out.println(GSON.toJson(chaptersArray));
+
+
 
         return chaptersArray;
 

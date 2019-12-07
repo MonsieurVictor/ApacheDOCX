@@ -4,20 +4,20 @@ public class Chapter {
     Chapter [] chapter;
     String chapter_name;
     String heading_name;
-    String [] keywords;
+    String [] keyWords;
     String [] stylesAllowed;
     int paragraphsCount;
     int symbolsCount;
 
     public Chapter(String chapter_name,
                    String heading_name,
-                   String[] keywords,
+                   String[] keyWords,
                    String[] stylesAllowed,
                    int paragraphsCount,
                    int symbolsCount) {
         this.chapter_name = chapter_name;
         this.heading_name = heading_name;
-        this.keywords = keywords;
+        this.keyWords = keyWords;
         this.stylesAllowed = stylesAllowed;
         this.paragraphsCount = paragraphsCount;
         this.symbolsCount = symbolsCount;
@@ -39,12 +39,12 @@ public class Chapter {
         this.heading_name = heading_name;
     }
 
-    public String[] getKeywords() {
-        return keywords;
+    public String[] getKeyWords() {
+        return keyWords;
     }
 
-    public void setKeywords(String[] keywords) {
-        this.keywords = keywords;
+    public void setKeyWords(String[] keyWords) {
+        this.keyWords = keyWords;
     }
 
     public String[] getStylesAllowed() {
