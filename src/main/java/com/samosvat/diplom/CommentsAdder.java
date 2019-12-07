@@ -29,10 +29,10 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
         XWPFDocument doc;
         List<XWPFParagraph> paragraphs;
 
-        public void start(ArrayList <StyleProperties> stylesArrayList) {
+        public void start(StyleSample[] stylesArray, Chapter[] chaptersArray) {
             System.out.println("Styles from stylesArrayList:");
-            for (int i = 0; i < stylesArrayList.size(); i++) {
-                System.out.println(stylesArrayList.get(i).getStyleName());
+            for (int i = 0; i < stylesArray.length; i++) {
+                System.out.println(stylesArray[i].getStyleName());
             }
             System.out.println("-------------------------------");
             String fileName = "C:\\DisV51.docx";
@@ -115,9 +115,9 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
         private void getFontSize (XWPFParagraph paragraph) throws IOException, SAXException, ParserConfigurationException, XPathExpressionException {
             String styleID = paragraph.getStyleID();
-            System.out.println("StyleID: " + styleID);
-            System.out.println(paragraph.getParagraphText());
-            System.out.println(paragraph.isPageBreak());
+//            System.out.println("StyleID: " + styleID);
+//            System.out.println(paragraph.getParagraphText());
+//            System.out.println(paragraph.isPageBreak());
 //            System.out.println("paragraph.getAlignment() " + paragraph.getAlignment());
 //            System.out.println("paragraph.getBorderBetween() " + paragraph.getBorderBetween());
 //            System.out.println("paragraph.getBorderBottom " + paragraph.getBorderBottom());

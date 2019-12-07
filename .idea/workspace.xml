@@ -2,18 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/Chapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSampleReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/styles.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gsonEXAMPLE2.json" beforeDir="false" afterPath="$PROJECT_DIR$/gsonEXAMPLE2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONTemp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONTemp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/structureDissertation.json" beforeDir="false" afterPath="$PROJECT_DIR$/structureDissertation.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONTemp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/PropertiesReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleProperties.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser$ChapterTemplateLibrary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser$Chapter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONTemp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONTemp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/NestedPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/NestedPojo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/Pojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/Pojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONTemp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/NestedPojo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/Pojo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/PropertiesReader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/StyleProperties.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +175,8 @@
       <workItem from="1575556064726" duration="9877000" />
       <workItem from="1575624299987" duration="17998000" />
       <workItem from="1575659297829" duration="7727000" />
-      <workItem from="1575707614882" duration="18198000" />
+      <workItem from="1575707614882" duration="18236000" />
+      <workItem from="1575738470767" duration="4328000" />
     </task>
     <servers />
   </component>
@@ -226,23 +235,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="50" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
           <line>54</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="52" />
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -4,13 +4,10 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.*;
-import java.util.*;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class JSONParser {
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
-    public void start () throws IOException {
+    public Chapter [] start () throws IOException {
 
 //        String [] strin = new String[]{"keya", "keyb"};
 //        String [] string = new String[]{"sta", "stb"};
@@ -19,7 +16,6 @@ public class JSONParser {
 //        String [] string2 = new String[]{"sta324324", "stb23432432"};
 //
 //        List<Chapter> chapterTemplateLibrary;
-//
 //
 //        Chapter chapter1 = new Chapter("титул",
 //                "БГТУ",
@@ -53,12 +49,19 @@ public class JSONParser {
 
         String path = "structureDissertation.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
-        Gson gson2 = new Gson();
-        Chapter [] chapterTemplateLibrary1  = gson2.fromJson(bufferedReader, Chapter[].class);
+        Gson gson = new Gson();
+        Chapter [] chaptersArray  = gson.fromJson(bufferedReader, Chapter[].class);
 
-        System.out.println(GSON.toJson(chapterTemplateLibrary1));
+        System.out.println(GSON.toJson(chaptersArray));
+
+        return chaptersArray;
 
     }
+
+
+
+
+
 
 //    class ChapterTemplateLibrary {
 ////        ArrayList <Chapter> chapterTemplateLibraries;
@@ -79,79 +82,6 @@ public class JSONParser {
 //            this.chapterList = chapterList;
 //        }
 //    }
-
-        public class Chapter {
-        Chapter [] chapter;
-            String chapter_name;
-            String heading_name;
-            String [] keywords;
-            String [] stylesAllowed;
-            int paragraphsCount;
-            int symbolsCount;
-
-            public Chapter(String chapter_name,
-                           String heading_name,
-                           String[] keywords,
-                           String[] stylesAllowed,
-                           int paragraphsCount,
-                           int symbolsCount) {
-                this.chapter_name = chapter_name;
-                this.heading_name = heading_name;
-                this.keywords = keywords;
-                this.stylesAllowed = stylesAllowed;
-                this.paragraphsCount = paragraphsCount;
-                this.symbolsCount = symbolsCount;
-            }
-
-            public String getChapter_name() {
-                return chapter_name;
-            }
-
-            public void setChapter_name(String chapter_name) {
-                this.chapter_name = chapter_name;
-            }
-
-            public String getHeading_name() {
-                return heading_name;
-            }
-
-            public void setHeading_name(String heading_name) {
-                this.heading_name = heading_name;
-            }
-
-            public String[] getKeywords() {
-                return keywords;
-            }
-
-            public void setKeywords(String[] keywords) {
-                this.keywords = keywords;
-            }
-
-            public String[] getStylesAllowed() {
-                return stylesAllowed;
-            }
-
-            public void setStylesAllowed(String[] stylesAllowed) {
-                this.stylesAllowed = stylesAllowed;
-            }
-
-            public int getParagraphsCount() {
-                return paragraphsCount;
-            }
-
-            public void setParagraphsCount(int paragraphsCount) {
-                this.paragraphsCount = paragraphsCount;
-            }
-
-            public int getSymbolsCount() {
-                return symbolsCount;
-            }
-
-            public void setSymbolsCount(int symbolsCount) {
-                this.symbolsCount = symbolsCount;
-            }
-        }
-
 
 
 //    private abstract class AbstractTextBlock {
