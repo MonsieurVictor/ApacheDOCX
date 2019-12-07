@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONTemp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gsonEXAMPLE2.json" beforeDir="false" afterPath="$PROJECT_DIR$/gsonEXAMPLE2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdderOLD.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/VParagraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/VParagraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONTemp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONTemp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/structureDissertation.json" beforeDir="false" afterPath="$PROJECT_DIR$/structureDissertation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser$ChapterTemplateLibrary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONTemp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONTemp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/NestedPojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/NestedPojo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/Pojo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/Pojo.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -166,7 +167,7 @@
       <workItem from="1575556064726" duration="9877000" />
       <workItem from="1575624299987" duration="17998000" />
       <workItem from="1575659297829" duration="7727000" />
-      <workItem from="1575707614882" duration="14120000" />
+      <workItem from="1575707614882" duration="18198000" />
     </task>
     <servers />
   </component>

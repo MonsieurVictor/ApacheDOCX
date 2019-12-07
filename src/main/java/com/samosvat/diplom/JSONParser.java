@@ -12,73 +12,73 @@ public class JSONParser {
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     public void start () throws IOException {
 
-        String [] strin = new String[]{"keya", "keyb"};
-        String [] string = new String[]{"sta", "stb"};
+//        String [] strin = new String[]{"keya", "keyb"};
+//        String [] string = new String[]{"sta", "stb"};
+//
+//        String [] strin2 = new String[]{"keyс", "keyв"};
+//        String [] string2 = new String[]{"sta324324", "stb23432432"};
+//
+//        List<Chapter> chapterTemplateLibrary;
+//
+//
+//        Chapter chapter1 = new Chapter("титул",
+//                "БГТУ",
+//                strin,
+//                string,
+//        1,
+//        4);
+//
+//        Chapter chapter2 = new Chapter("оглав",
+//                "оглав",
+//                strin2,
+//                string2,
+//                4,
+//                100);
+//
+//        Gson gson = new Gson();
+//
+//        ArrayList <Chapter> chapterList = new ArrayList<>() ;
+//        chapterList.add(chapter1);
+//        chapterList.add(chapter2);
+//
+//        chapterTemplateLibrary = new ArrayList<Chapter>(chapterList);
+//
+//        System.out.println(GSON.toJson(chapterTemplateLibrary));
+//
+//        Writer writer = new FileWriter("gsonEXAMPLE2.json");
+//        gson.toJson(chapterList, writer);
+//
+//        writer.flush();
+//        writer.close();
 
-        String [] strin2 = new String[]{"keyс", "keyв"};
-        String [] string2 = new String[]{"sta324324", "stb23432432"};
-
-        List<Chapter> chapterTemplateLibrary;
-
-
-        Chapter chapter1 = new Chapter("титул",
-                "БГТУ",
-                strin,
-                string,
-        1,
-        4);
-
-        Chapter chapter2 = new Chapter("оглав",
-                "оглав",
-                strin2,
-                string2,
-                4,
-                100);
-
-        Gson gson = new Gson();
-
-        ArrayList <Chapter> chapterList = new ArrayList<>() ;
-        chapterList.add(chapter1);
-        chapterList.add(chapter2);
-
-        chapterTemplateLibrary = new ArrayList<Chapter>(chapterList);
-
-        System.out.println(GSON.toJson(chapterTemplateLibrary));
-
-        Writer writer = new FileWriter("gsonEXAMPLE2.json");
-        gson.toJson(chapterList, writer);
-
-        writer.flush();
-        writer.close();
-
-        String path = "gsonEXAMPLE2.json";
+        String path = "structureDissertation.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         Gson gson2 = new Gson();
-        ChapterTemplateLibrary chapterTemplateLibrary1  = gson2.fromJson(bufferedReader, ChapterTemplateLibrary.class);
+        Chapter [] chapterTemplateLibrary1  = gson2.fromJson(bufferedReader, Chapter[].class);
 
-        System.out.println(gson2.toString());
+        System.out.println(GSON.toJson(chapterTemplateLibrary1));
 
     }
 
-    class ChapterTemplateLibrary {
-//        ArrayList <Chapter> chapterTemplateLibraries;
-
-        ArrayList <Chapter> ChapterTemplateLibrary;
-
-        public ArrayList <Chapter> getChapterList() {
-            return chapterList;
-        }
-
-        ArrayList <Chapter> chapterList;
-
-        public int getLibraryLength(){
-            return chapterList.size();
-        }
-
-        public ChapterTemplateLibrary (ArrayList <Chapter> chapterList) {
-            this.chapterList = chapterList;
-        }
-    }
+//    class ChapterTemplateLibrary {
+////        ArrayList <Chapter> chapterTemplateLibraries;
+//
+//        ArrayList <Chapter> ChapterTemplateLibrary;
+//
+//        public ArrayList <Chapter> getChapterList() {
+//            return chapterList;
+//        }
+//
+//        ArrayList <Chapter> chapterList;
+//
+//        public int getLibraryLength(){
+//            return chapterList.size();
+//        }
+//
+//        public ChapterTemplateLibrary (ArrayList <Chapter> chapterList) {
+//            this.chapterList = chapterList;
+//        }
+//    }
 
         public class Chapter {
         Chapter [] chapter;

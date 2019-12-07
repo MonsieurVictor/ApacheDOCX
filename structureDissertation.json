@@ -1,7 +1,4 @@
-{
-  "ChapterTemplateLibrary":{
-    "Chapter":{
-      "chapter_name": "Титульный лист",
+[{    "chapter_name": "Титульный лист",
       "heading_name": "МИНИСТЕРСТВО ОБРАЗОВАНИЯ И НАУКИ РФ",
       "keyWords": [
         "ФГБОУ ВО БРЯНСКИЙ ГОСУДАРСТВЕННЫЙ ТЕХНИЧЕСКИЙ УНИВЕРСИТЕТ",
@@ -25,8 +22,7 @@
       "symbolsCount": "200"
       },
 
-      "chapter":{
-        "chapter_name": "Аннотация",
+  {     "chapter_name": "Аннотация",
         "heading_name": "AННОТАЦИЯ",
         "keyWords": [
           "спроектирована",
@@ -40,10 +36,9 @@
         "paragraphsCount": "30",
         "symbolsCount": "200"
       },
-
-      "Chapter":{
+  {
         "chapter_name": "Основной текст",
-        "Main_Text" : {
+        "Main_Text" : {},
           "heading_name": "",
           "keyWords": [
           ],
@@ -52,7 +47,7 @@
           "paragraphsCount": "200",
           "symbolsCount": "1000"
         },
-        "Chapter":{
+  {
           "chapter_name": "Список литературы",
           "heading_name": "Список литературы",
           "keyWords": [],
@@ -61,7 +56,6 @@
           "paragraphsCount": "30",
           "symbolsCount": "200"
         }
-      }
-    }
-}
+
+  ]
 
