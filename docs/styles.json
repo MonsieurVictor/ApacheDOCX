@@ -1,14 +1,37 @@
 [
   {
-    "styleID": "Abzats",
-    "fontName": "Times New Roman",
-    "fontHeight": "14",
-    "isBold": "false"
+  "styleID": "Abzats",
+  "fontName": "Times New Roman",
+  "fontHeight": "14",
+  "isBold": "false",
+  "isItalic": "false"
   },
   {
-    "styleID" : "Zagolovok1",
+    "styleID" : "Titul_list",
+    "fontName" : "Times New Roman",
+    "fontHeight" : "16",
+    "isBold" : "true",
+    "isItalic": "false"
+  },
+  {
+  "styleID" : "Zagolovok1",
   "fontName" : "Times New Roman",
   "fontHeight" : "16",
-  "isBold" : "true"
+  "isBold" : "true",
+  "isItalic": "false"
+  },
+  {
+    "styleID" : "Zagolovok2",
+    "fontName" : "Times New Roman",
+    "fontHeight" : "14",
+    "isBold" : "true",
+    "isItalic": "false"
+  },
+  {
+    "styleID" : "Zagolovok3",
+    "fontName" : "Times New Roman",
+    "fontHeight" : "14",
+    "isBold" : "false",
+    "isItalic": "true"
   }
 ]

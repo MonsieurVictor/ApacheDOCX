@@ -20,7 +20,8 @@ import javax.xml.xpath.XPathFactory;
 import java.io.IOException;
 
 public class XMLParser {
-    public void parse(String stringXML) {
+    int fontHeight;
+    public int parse(String stringXML) {
 
         Node node = null;
         try {
@@ -28,10 +29,13 @@ public class XMLParser {
             Document dDoc = builder.parse(new ByteArrayInputStream(stringXML.getBytes()));
             XPath xPath = XPathFactory.newInstance().newXPath();
             NodeList nodes = (NodeList) xPath.evaluate("//sz/@val", dDoc, XPathConstants.NODESET);
+
             for (int i = 0; i < nodes.getLength(); i++) {
+                fontHeight = Integer.parseInt(node.getTextContent())/2;
                 node = nodes.item(i);
-                System.out.println("Font size = " + Integer.parseInt(node.getTextContent())/2);
+                System.out.println("Font size = " + fontHeight);
             }
+
         } catch (SAXException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -41,6 +45,7 @@ public class XMLParser {
         } catch (XPathExpressionException e) {
             e.printStackTrace();
         }
+        return fontHeight;
     }
 }
 

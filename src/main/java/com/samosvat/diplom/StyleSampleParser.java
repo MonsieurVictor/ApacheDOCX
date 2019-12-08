@@ -12,6 +12,7 @@ import java.util.Properties;
 
 public class StyleSampleParser {
 
+
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
     public StyleSample[] start() throws IOException {
@@ -22,7 +23,7 @@ public class StyleSampleParser {
         Gson gson = new Gson();
         StyleSample[] styleSamplesArray = gson.fromJson(bufferedReader, StyleSample[].class);
 
-//        System.out.println(GSON.toJson(styleSamplesArray));
+        System.out.println(GSON.toJson(styleSamplesArray));
 
 
 

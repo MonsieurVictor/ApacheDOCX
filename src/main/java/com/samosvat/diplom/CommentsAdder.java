@@ -30,6 +30,7 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
         List<XWPFParagraph> paragraphs;
         StyleSample styleSample;
         StyleSample [] stylesArray;
+        StyleChecker styleChecker;
         Chapter chapter;
         Chapter[] chaptersArray;
         int chapterCount;
@@ -85,8 +86,11 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                 for (int i = 0; i < paragraphs.size(); i++) {
 
                     XWPFParagraph paragraph = paragraphs.get(i);
-                    getFontSize(paragraph);
-                    String errorMessage =  chapterChecker.checkChapter(paragraph);
+                    String errorMessage =  chapterChecker.checkChapter(paragraph, chaptersArray);
+                    if (errorMessage.equals("верно")) {
+                        errorMessage = styleChecker.checkStyle(paragraph, stylesArray, doc);
+
+                    }
 
 
                     if (errorMessage != null) {
@@ -111,52 +115,10 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
             return  commentsAddedCount;
         }
 
-        private void getFontSize (XWPFParagraph paragraph) throws IOException, SAXException, ParserConfigurationException, XPathExpressionException {
-            String styleID = paragraph.getStyleID();
-//            System.out.println("StyleID: " + styleID);
-//            System.out.println(paragraph.getParagraphText());
-//            System.out.println(paragraph.isPageBreak());
-//            System.out.println("paragraph.getAlignment() " + paragraph.getAlignment());
-//            System.out.println("paragraph.getBorderBetween() " + paragraph.getBorderBetween());
-//            System.out.println("paragraph.getBorderBottom " + paragraph.getBorderBottom());
-//            System.out.println("paragraph.getBorderLeft() " + paragraph.getBorderLeft());
-//            System.out.println("paragraph.getBorderRight() " + paragraph.getBorderRight());
-//            System.out.println("paragraph.getBorderTop() " + paragraph.getBorderTop());
-//            System.out.println("paragraph.getFontAlignment() " + paragraph.getFontAlignment());
-//            System.out.println("paragraph.getIndentationFirstLine() " + paragraph.getIndentationFirstLine());
-//            System.out.println("paragraph.getSpacingBefore() " + paragraph.getSpacingBefore());
-//            System.out.println("paragraph.getSpacingAfter() " + paragraph.getSpacingAfter());
-//            System.out.println("paragraph.getSpacingBetween() " + paragraph.getSpacingBetween());
-//            System.out.println("paragraph.getSpacingBeforeLines() " + paragraph.getSpacingBeforeLines());
 
-            if(styleID != null) {
 
-            XWPFStyle xwpfStyle= doc.getStyles().getStyle(styleID);
-            CTStyle ctStyle = xwpfStyle.getCTStyle();
-//            System.out.println(ctStyle.toString());
-            String stringXML = ctStyle.toString();
-            XMLParser xmlParser = new XMLParser();
-            xmlParser.parse(ctStyle.toString());
-            }
-        }
 
-        private void readParagraphStyle () {
-            Iterator<XWPFParagraph> paragraphIterator = null;
-            paragraphIterator = paragraphs.iterator();
-            List<IBodyElement> iBodyElementList = doc.getBodyElements();
-            XWPFParagraph paragraph = null;
 
-            for (IBodyElement p : iBodyElementList) {
-                XWPFStyle style = null;
-                BodyElementType bodyElementType = p.getElementType();
-                if (bodyElementType.compareTo(BodyElementType.PARAGRAPH) == 0) {
-                        if (paragraphIterator.hasNext()) {
-                            paragraph = paragraphIterator.next();
-                            System.out.println("getStyleID(): " + paragraph.getStyleID() + "; getStyle(): " + paragraph.getStyle() + "; getText(): "+ paragraph.getText() );
-                        }
-                }
-            }
-        }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //a method for creating the CommentsDocument /word/comments.xml in the *.docx ZIP archive

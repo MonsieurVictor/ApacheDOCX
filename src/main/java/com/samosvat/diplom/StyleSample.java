@@ -3,6 +3,7 @@ package com.samosvat.diplom;
 public class StyleSample {
     StyleSample[] styleSample;
 
+
     public void setStyleID(String styleID) {
         this.styleID = styleID;
     }
@@ -15,24 +16,34 @@ public class StyleSample {
         this.fontHeight = fontHeight;
     }
 
-    public void setBold(boolean bold) {
-        isBold = bold;
+    public void setBold(boolean isBold) {
+        this.isBold = isBold;
+    }
+
+    public void setItalic(boolean isItalic) {
+        this.isItalic = isItalic;
     }
 
     private String styleID;
     private String fontName;
     private int fontHeight;
     private boolean isBold;
+    private boolean isItalic;
 
-    StyleSample(String styleID, String fontName, int fontHeight, boolean isBold) {
+    StyleSample(String styleID, String fontName, int fontHeight, boolean isBold, boolean isItalic) {
         this.styleID = styleID;
         this.fontName = fontName;
         this.fontHeight = fontHeight;
         this.isBold = isBold;
+        this.isItalic = isItalic;
+
     }
 
     public String getStyleID() {return styleID;}
     public String getFontName() {return fontName;}
     public int getFontHeight() {return fontHeight;}
     public boolean isBold() {return isBold;}
+    public boolean isItalic() {
+        return isItalic;
+    }
 }
