@@ -39,6 +39,7 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
         public void start(StyleSample[] stylesArray, Chapter[] chaptersArray) {
 
             chapterChecker = new ChapterChecker(chaptersArray);
+            styleChecker = new StyleChecker(stylesArray);
 
             this.stylesArray = stylesArray;
             this.chaptersArray = chaptersArray;
@@ -48,13 +49,12 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 //            }
 
             System.out.println("-------------------------------");
-            String fileName = "C:\\DisV51.docx";
-            String fileOut = "C:\\styles44444.docx";
+            String fileName = "docs/styles4.docx";
+            String fileOut = "docs/styles44444.docx";
             try {
                 doc = new XWPFDocument(OPCPackage.open(fileName));
                 paragraphs = doc.getParagraphs();
                 System.out.println("Комментариев добавлено: " + findText());
-//                readParagraphStyle();
                 FileOutputStream out = new FileOutputStream(fileOut);
                 doc.write(out);
                 out.close();
@@ -70,9 +70,6 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
         private int findText() throws Exception {
 
-            String forComment1 = "процесс";
-            String textComment1 = "Найден процесс";
-
             int commentsAddedCount = 0;
             BigInteger bIg = BigInteger.ZERO;
 
@@ -87,38 +84,32 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
                     XWPFParagraph paragraph = paragraphs.get(i);
                     String errorMessage =  chapterChecker.checkChapter(paragraph, chaptersArray);
-                    if (errorMessage.equals("верно")) {
-                        errorMessage = styleChecker.checkStyle(paragraph, stylesArray, doc);
-
-                    }
-
 
                     if (errorMessage != null) {
-                        int count = paragraph.getText().length();
-                        bIg = bIg.add(BigInteger.ONE);
-                        CTComments comments = myXWPFCommentsDocument.getComments();
-                        CTComment ctComment = comments.addNewComment();
-                        ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
-                        ctComment.setAuthor("Samosvat");
-                        ctComment.setInitials("VVS");
-                        ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
-                        ctComment.addNewP().addNewR().addNewT().setStringValue(errorMessage);
-                        ctComment.addNewP().addNewR().addNewT().setStringValue( "\n Также в этом абзаце " + count + " символов.");
-                        ctComment.setId(bIg);
-                        commentsAddedCount++;
-                        paragraph.getCTP().addNewCommentRangeEnd().setId(bIg);
-                        paragraph.getCTP().addNewR().addNewCommentReference().setId(bIg);
-
+                        if (errorMessage.equals("верно!")) {
+                            errorMessage = styleChecker.checkStyle(paragraph, stylesArray, doc);
+                        }
+                        if (!errorMessage.equals("")) {
+                            int count = paragraph.getText().length();
+                            bIg = bIg.add(BigInteger.ONE);
+                            CTComments comments = myXWPFCommentsDocument.getComments();
+                            CTComment ctComment = comments.addNewComment();
+                            ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
+                            ctComment.setAuthor("Samosvat");
+                            ctComment.setInitials("VVS");
+                            ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
+                            ctComment.addNewP().addNewR().addNewT().setStringValue(errorMessage);
+//                            ctComment.addNewP().addNewR().addNewT().setStringValue("\n Также в этом абзаце " + count + " символов.");
+                            ctComment.setId(bIg);
+                            commentsAddedCount++;
+                            paragraph.getCTP().addNewCommentRangeEnd().setId(bIg);
+                            paragraph.getCTP().addNewR().addNewCommentReference().setId(bIg);
+                        }
                     }
                 }
             }
             return  commentsAddedCount;
         }
-
-
-
-
-
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //a method for creating the CommentsDocument /word/comments.xml in the *.docx ZIP archive

@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class StyleSampleParser {
+public class StyleJSONParser {
 
 
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();

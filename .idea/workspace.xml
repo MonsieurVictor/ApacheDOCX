@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/styles4.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/chaptersDissertation.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chaptersDissertation.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/styles.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/styles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/styles.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/titul.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSampleParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSampleParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterJSONParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSampleParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleJSONParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/ChapterChecker.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder$MyXWPFCommentsDocument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/StyleSample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/StyleSampleParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/XMLParser.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +53,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/baeldung/poi" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -62,15 +63,16 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX\docs" />
-      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX" />
+      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX\src\main\java\com\baeldung\poi" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.samosvat.poi.diplom" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX\src\main\java\com\baeldung\poi" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX\docs" />
+      <recent name="C:\Users\Win10\Documents\GitHub\ApacheDOCX" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -175,6 +177,7 @@
       <workItem from="1575707614882" duration="18236000" />
       <workItem from="1575738470767" duration="16820000" />
       <workItem from="1575818442235" duration="7318000" />
+      <workItem from="1575878055773" duration="18548000" />
     </task>
     <servers />
   </component>
@@ -203,38 +206,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
-          <line>57</line>
+          <line>85</line>
           <option name="timeStamp" value="29" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
-          <line>58</line>
+          <line>86</line>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="45" />
+          <line>37</line>
+          <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="46" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="118" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterChecker.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterChecker.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterChecker.java</url>
-          <line>17</line>
-          <option name="timeStamp" value="65" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="119" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -5,7 +5,7 @@ import com.google.gson.GsonBuilder;
 
 import java.io.*;
 
-public class JSONParser {
+public class ChapterJSONParser {
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     public Chapter [] start () throws IOException {
 

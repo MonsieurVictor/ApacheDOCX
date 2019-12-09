@@ -7,10 +7,17 @@
   "isItalic": "false"
   },
   {
-    "styleID" : "Titul_list",
+    "styleID" : "Titulcentre",
     "fontName" : "Times New Roman",
     "fontHeight" : "16",
     "isBold" : "true",
+    "isItalic": "false"
+  },
+  {
+    "styleID" : "Titulright",
+    "fontName" : "Times New Roman",
+    "fontHeight" : "14",
+    "isBold" : "false",
     "isItalic": "false"
   },
   {

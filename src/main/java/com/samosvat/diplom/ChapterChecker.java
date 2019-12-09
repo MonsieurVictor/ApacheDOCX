@@ -19,10 +19,11 @@ public class ChapterChecker {
                 currentKeyWord = chaptersArray[i].keyWords[j];
                 if(paragraphText.contains(chaptersArray[i].keyWords[j])){
                     System.out.println("true " + paragraphText + " contains " + chaptersArray[i].keyWords[j]);
+                    System.out.println("верно!!!");
                     return "верно!";
                 }
-            }   System.out.println("i=" +  i + "j="+  j + "false i paragraphText " + paragraphText + " currentKeyWord " + currentKeyWord);
-            return "i=" +  i + "j="+  j + " false paragraphText " + paragraphText + " currentKeyWord " + currentKeyWord;
+            }   System.out.println("i= " +  i + " j= "+  j + " false paragraphText " + paragraphText + " currentKeyWord " + currentKeyWord);
+            return "i= " +  i + " j= "+  j + " false paragraphText " + paragraphText + " currentKeyWord " + currentKeyWord;
         }
         System.out.println("false all");
         return "false all";
