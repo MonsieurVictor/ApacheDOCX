@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="apache:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/styles4.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/GUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/chaptersDissertation.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/chaptersDissertation.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/styles.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/styles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/styles.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/titul.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/styles44444.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/JSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterJSONParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSampleParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleJSONParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/XMLParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/JSONParser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/XMLParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/XMLParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleJSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleJSONParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleStandard.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,16 +50,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="98" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="343" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2678161" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -178,6 +179,14 @@
       <workItem from="1575738470767" duration="16820000" />
       <workItem from="1575818442235" duration="7318000" />
       <workItem from="1575878055773" duration="18548000" />
+      <workItem from="1576052646869" duration="3337000" />
+      <workItem from="1576158117734" duration="575000" />
+      <workItem from="1576237017972" duration="692000" />
+      <workItem from="1576242583078" duration="2827000" />
+      <workItem from="1576263783552" duration="6793000" />
+      <workItem from="1576503738538" duration="598000" />
+      <workItem from="1576590455938" duration="5000" />
+      <workItem from="1576647130831" duration="5141000" />
     </task>
     <servers />
   </component>

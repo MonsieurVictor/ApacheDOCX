@@ -10,14 +10,14 @@ import java.io.IOException;
 
 public class StyleChecker {
     XWPFParagraph paragraph;
-    StyleSample[] stylesArray;
+    StyleStandard[] stylesArray;
     XWPFDocument doc;
 
-    public StyleChecker(StyleSample[] stylesArray) {
+    public StyleChecker(StyleStandard[] stylesArray) {
         this.stylesArray = stylesArray;
     }
 
-    public String checkStyle(XWPFParagraph paragraph, StyleSample[] stylesArray, XWPFDocument doc) throws SAXException, ParserConfigurationException, XPathExpressionException, IOException {
+    public String checkStyle(XWPFParagraph paragraph, StyleStandard[] stylesArray, XWPFDocument doc) throws SAXException, ParserConfigurationException, XPathExpressionException, IOException {
         String errorMessage = "";
 
         this.doc = doc;
@@ -36,33 +36,33 @@ public class StyleChecker {
         for (int i = 0; i < stylesArray.length; i++) {
 
             errorMessage = "";
-            String defaultStyleID = stylesArray[i].getStyleID();
+            String standardStyleID = stylesArray[i].getStyleID();
 
             if (paragraphStyleID == null) {
                 return "paragraphStyleID = null";
             } else {
-                if (defaultStyleID.equals(paragraphStyleID)) {
-                    int defaultFontHeight = stylesArray[i].getFontHeight();
-                    String defaultFontName = stylesArray[i].getFontName();
-                    boolean defaultIsBold = stylesArray[i].isBold();
-                    boolean defaultIsItalic = stylesArray[i].isItalic();
+                if (standardStyleID.equals(paragraphStyleID)) {
+                    int standardFontHeight = stylesArray[i].getFontHeight();
+                    String standardFontName = stylesArray[i].getFontName();
+                    boolean standardIsBold = stylesArray[i].isBold();
+                    boolean standardIsItalic = stylesArray[i].isItalic();
 
                     if (paragraphFontHeight == 0) {
                         return "paragraphFontHeight == 0";
                     } else {
-                        if (defaultFontHeight == paragraphFontHeight) {
+                        if (standardFontHeight == paragraphFontHeight) {
                             System.out.println(errorMessage);
                         } else {
-                            errorMessage += "размер шрифта: " + paragraphFontHeight + ". Требуется: " + defaultFontHeight;
+                            errorMessage += "размер шрифта: " + paragraphFontHeight + ". Требуется: " + standardFontHeight;
                         }
                     }
                     if (paragraphFontName == null) {
                         return "paragraphFontName == null";
                     } else {
-                        if (defaultFontName.equals(paragraphFontName)) {
+                        if (standardFontName.equals(paragraphFontName)) {
                             System.out.println(errorMessage);
                         } else {
-                            errorMessage += "Имя шрифта: " + paragraphFontName + ". Требуется: " + defaultFontName;
+                            errorMessage += "Имя шрифта: " + paragraphFontName + ". Требуется: " + standardFontName;
                         }
                     }
                     if (errorMessage.equals("")){

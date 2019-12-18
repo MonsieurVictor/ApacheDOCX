@@ -16,11 +16,8 @@ import org.apache.poi.openxml4j.opc.PackagingURIHelper;
 import org.apache.poi.xwpf.usermodel.*;
 import org.apache.xmlbeans.XmlOptions;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
-import org.xml.sax.SAXException;
 
 import javax.xml.namespace.QName;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPathExpressionException;
 
 import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
@@ -28,15 +25,15 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 
         XWPFDocument doc;
         List<XWPFParagraph> paragraphs;
-        StyleSample styleSample;
-        StyleSample [] stylesArray;
+        StyleStandard styleStandard;
+        StyleStandard[] stylesArray;
         StyleChecker styleChecker;
         Chapter chapter;
         Chapter[] chaptersArray;
         int chapterCount;
         ChapterChecker chapterChecker;
 
-        public void start(StyleSample[] stylesArray, Chapter[] chaptersArray) {
+        public void start(StyleStandard[] stylesArray, Chapter[] chaptersArray) {
 
             chapterChecker = new ChapterChecker(chaptersArray);
             styleChecker = new StyleChecker(stylesArray);

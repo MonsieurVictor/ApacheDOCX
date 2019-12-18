@@ -4,24 +4,21 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Properties;
 
 public class StyleJSONParser {
 
 
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 
-    public StyleSample[] start() throws IOException {
+    public StyleStandard[] start() throws IOException {
 
 
         String path = "docs/styles.json";
         BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
         Gson gson = new Gson();
-        StyleSample[] styleSamplesArray = gson.fromJson(bufferedReader, StyleSample[].class);
+        StyleStandard[] styleSamplesArray = gson.fromJson(bufferedReader, StyleStandard[].class);
 
         System.out.println(GSON.toJson(styleSamplesArray));
 

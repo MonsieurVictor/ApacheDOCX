@@ -1,7 +1,7 @@
 package com.samosvat.diplom;
 
-public class StyleSample {
-    StyleSample[] styleSample;
+public class StyleStandard {
+    StyleStandard[] styleStandard;
 
 
     public void setStyleID(String styleID) {
@@ -30,7 +30,7 @@ public class StyleSample {
     private boolean isBold;
     private boolean isItalic;
 
-    StyleSample(String styleID, String fontName, int fontHeight, boolean isBold, boolean isItalic) {
+    StyleStandard(String styleID, String fontName, int fontHeight, boolean isBold, boolean isItalic) {
         this.styleID = styleID;
         this.fontName = fontName;
         this.fontHeight = fontHeight;
