@@ -46,8 +46,8 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
 //            }
 
             System.out.println("-------------------------------");
-            String fileName = "docs/styles4.docx";
-            String fileOut = "docs/styles44444.docx";
+            String fileName = "docs/disV5.docx";
+            String fileOut = "docs/disV5_output.docx";
             try {
                 doc = new XWPFDocument(OPCPackage.open(fileName));
                 paragraphs = doc.getParagraphs();
@@ -92,7 +92,7 @@ import static org.apache.poi.ooxml.POIXMLTypeLoader.DEFAULT_XML_OPTIONS;
                             CTComments comments = myXWPFCommentsDocument.getComments();
                             CTComment ctComment = comments.addNewComment();
                             ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
-                            ctComment.setAuthor("Samosvat");
+                            ctComment.setAuthor("DOCX Analyzer");
                             ctComment.setInitials("VVS");
                             ctComment.setDate(new GregorianCalendar(Locale.getDefault()));
                             ctComment.addNewP().addNewR().addNewT().setStringValue(errorMessage);

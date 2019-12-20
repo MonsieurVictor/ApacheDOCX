@@ -9,6 +9,25 @@ public class ChapterJSONParser {
     private final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     public Chapter [] start () throws IOException {
 
+
+
+        String path = "docs/chaptersDissertation.json";
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
+        Gson gson = new Gson();
+        Chapter [] chaptersArray  = gson.fromJson(bufferedReader, Chapter[].class);
+
+
+
+//        System.out.println(GSON.toJson(chaptersArray));
+
+
+
+        return chaptersArray;
+
+    }
+
+
+
 //        String [] strin = new String[]{"keya", "keyb"};
 //        String [] string = new String[]{"sta", "stb"};
 //
@@ -46,25 +65,6 @@ public class ChapterJSONParser {
 //
 //        writer.flush();
 //        writer.close();
-
-        String path = "docs/chaptersDissertation.json";
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(path));
-        Gson gson = new Gson();
-        Chapter [] chaptersArray  = gson.fromJson(bufferedReader, Chapter[].class);
-
-
-
-//        System.out.println(GSON.toJson(chaptersArray));
-
-
-
-        return chaptersArray;
-
-    }
-
-
-
-
 
 
 //    class ChapterTemplateLibrary {

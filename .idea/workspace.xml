@@ -7,16 +7,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9bbfcc64-863e-4050-aa15-e1f11c7dac2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/GUI.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CreateWordWithComments.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/annotation.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/disV5.docx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/disV5.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/disV5output.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/styles4.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/styles44444.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterJSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/ChapterJSONParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/CommentsAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleJSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleJSONParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/StyleStandard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/samosvat/diplom/VParagraph.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/logo-leaf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/poi-word-para1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/poi-word-para2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/poi-word-para3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/ChapterJSONParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/ChapterJSONParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/CommentsAdder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/samosvat/diplom/GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logo-leaf.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/poi-word-para1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/poi-word-para2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/poi-word-para3.txt" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -186,7 +206,11 @@
       <workItem from="1576263783552" duration="6793000" />
       <workItem from="1576503738538" duration="598000" />
       <workItem from="1576590455938" duration="5000" />
-      <workItem from="1576647130831" duration="5141000" />
+      <workItem from="1576647130831" duration="5432000" />
+      <workItem from="1576652838595" duration="891000" />
+      <workItem from="1576661642250" duration="6071000" />
+      <workItem from="1576791229807" duration="783000" />
+      <workItem from="1576823622820" duration="1934000" />
     </task>
     <servers />
   </component>

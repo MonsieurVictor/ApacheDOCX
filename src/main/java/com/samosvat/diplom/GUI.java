@@ -31,7 +31,6 @@ public class GUI {
         final JLabel label = new JLabel();
         label.setAlignmentX(CENTER_ALIGNMENT);
 
-
         panel.add(Box.createRigidArea(new Dimension(10, 10)));
 
         JButton button = new JButton("Выбрать документ");
@@ -50,7 +49,6 @@ public class GUI {
 
         final JLabel label2 = new JLabel();
         label2.setAlignmentX(CENTER_ALIGNMENT);
-
 
         JButton button2 = new JButton("Выбрать оформление");
         button2.setAlignmentX(CENTER_ALIGNMENT);
@@ -109,11 +107,15 @@ public class GUI {
 
         button5.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(panel,
-                        "<html><h2>Готово.</h2><i>файл </i>"+ newFileName +" успешно создан!");
-            }
-        });
 
+                JOptionPane.showMessageDialog(panel,
+                        "Входной файл не указан!");
+            }
+
+//                JOptionPane.showMessageDialog(panel,
+//                        "<html><h2>Готово.</h2><i>файл </i>"+ newFileName +" успешно создан!");
+//            }
+        });
 
         panel.add(label);
         panel.add(Box.createRigidArea(new Dimension(10, 10)));
